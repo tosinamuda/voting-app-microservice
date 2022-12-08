@@ -6,6 +6,8 @@ RUN apt-get update \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get install -y install build-essential
+
 # Add Tini for proper init of signals
 ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
