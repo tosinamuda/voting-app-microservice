@@ -1,3 +1,6 @@
+var instana = require('@instana/collector');
+instana(); // this is fine
+
 var express = require('express'),
     async = require('async'),
     pg = require('pg'),
