@@ -1,6 +1,6 @@
-FROM node:10-slim
+FROM node:10
 
-RUN apt-get install -y build-essential software-properties-common make gcc  python
+RUN apt-get update && apt-get install -y build-essential software-properties-common make gcc python
 
 # add curl for healthcheck
 RUN apt-get update \
