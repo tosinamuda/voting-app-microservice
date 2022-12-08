@@ -6,7 +6,7 @@ RUN apt-get update \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y install build-essential
+RUN apt-get install -y build-essential software-properties-common make gcc 
 
 # Add Tini for proper init of signals
 ENV TINI_VERSION v0.19.0
