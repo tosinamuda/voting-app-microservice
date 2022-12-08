@@ -1,12 +1,12 @@
 FROM node:10-slim
 
+RUN apt-get install -y build-essential software-properties-common make gcc  python
+
 # add curl for healthcheck
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get install -y build-essential software-properties-common make gcc 
 
 # Add Tini for proper init of signals
 ENV TINI_VERSION v0.19.0
